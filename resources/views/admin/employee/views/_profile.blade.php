@@ -2,7 +2,7 @@
 	<div class="col-xs-12 col-md-2">
 		<div class="row-fluid">
 			<div class="col-xs-12" style="text-align: center;">
-				<img id="profile_image_1" src="{{ asset($profileUser->avatar()) }}" class="img-polaroid img-thumbnail" style="max-width: 140px;max-height: 140px;">
+				<img id="profile_image_1" src="{{ asset('$profileUser->avatar()') }}" class="img-polaroid img-thumbnail" style="max-width: 140px;max-height: 140px;">
 			</div>
 		</div>
 	</div>

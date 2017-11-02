@@ -3,9 +3,15 @@
     <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
+      <?php if($user->role->slug == "dg"): ?>
+            <div class="pull-left image">
+                <img src="<?php echo e(asset("uploads/profile/dg_mini.png")); ?>" class="img-circle" alt="User Image" />
+            </div>
+      <?php else: ?>
             <div class="pull-left image">
                 <img src="<?php echo e(asset(Auth::user()->avatar())); ?>" class="img-circle" alt="User Image" />
             </div>
+      <?php endif; ?>
             <div class="pull-left info">
                 <p><?php echo e(Auth::user()->name); ?></p>
 
