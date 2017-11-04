@@ -42,7 +42,7 @@
 	<div class="row clearfix" style="margin-top: 20px;">
 		<div class="form-group{{ $errors->has('mother_name') ? ' has-error' : '' }}">
 			<div class="col-md-2 col-md-offset-1 text-right">
-            	<label for="mother_name">User's Mother Name3<small style="color: red; font-size: 1.2em;">*</small></label>
+            	<label for="mother_name">User's Mother Name<small style="color: red; font-size: 1.2em;">*</small></label>
 			</div>
             <div class="col-md-5">
             	<input name="mother_name" type="text" class="form-control" id="mother_name" value="{{ old('mother_name') }}">

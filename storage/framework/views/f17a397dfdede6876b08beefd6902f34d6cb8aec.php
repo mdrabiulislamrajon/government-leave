@@ -17,7 +17,7 @@
                     <td><?php echo e(entobn($value)); ?> (<?php echo e(entobn($total = config("leave.leaves." . $key))); ?>)</td>
                     <td><?php echo e(entobn(count($leaves) ? $leaves->where('type_id', $key)->count() : 0)); ?></td>
                     <td><?php echo e(entobn(count($leaves) ? $leaves->where('type_id', $key)->where('status', 0)->count() : 0)); ?></td>
-                    <td><?php echo e(entobn(count($leaves) ? $leaves->where('type_id', $key)->where('status', 1)->count() : 0)); ?></td>
+                    <td><?php echo e(entobn(count($leaves) ? $leaves->where('type_id', $key)->where('status', 2)->count() : 0)); ?></td>
                     <td><?php echo e(entobn($applied  = count($leaves) ? $leaves->where('type_id', $key)->sum('no_of_days') : 0)); ?></td>
                     <td><?php echo e(entobn($approved = count($leaves) ? $leaves->where('type_id', $key)->where('status', 1)->sum('no_of_days') : 0)); ?></td>
                     <td><?php echo e(entobn($total - $approved)); ?></td>
